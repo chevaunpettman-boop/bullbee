@@ -1,0 +1,113 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    /* Core palette extracted from live trybullbee.com + warm complementary mid-tones */
+    --color-base-text: 248 240 226; /* #F8F0E2 Warm Tallow Cream */
+    --color-base-background: 23 23 23; /* #171717 Deep Charcoal Obsidian */
+    --color-base-highlight: 204 156 82; /* #CC9C52 Warm Honey Ochre */
+    --color-base-button: 211 175 104; /* #D3AF68 Bullbee Gold Button */
+    --color-base-button-gradient: linear-gradient(268deg, #D9AD5B 1%, #D09931 100%);
+    --color-drawer-background: 13 9 6; /* #0D0906 Deep Texas Ranch Black */
+    --color-price: 217 162 95; /* #D9A25F */
+    --color-sale-price: 217 173 91; /* #D9AD5B */
+
+    /* Soft Parchment & Muted Leather Mid-tones */
+    --color-parchment: 244 234 218; /* #F4EADA Soft Parchment */
+    --color-leather-dark: 36 30 25; /* #241E19 Muted Saddle Leather */
+    --color-leather-border: 61 51 43; /* #3D332B Warm Leather Border */
+
+    --font-display: 'Barlow Condensed', sans-serif;
+    --font-body: 'Inter', -apple-system, sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+  }
+
+  html {
+    font-size: 17px; /* Increased global base font size for executive legibility */
+  }
+
+  body {
+    font-family: var(--font-body);
+    color: rgb(var(--color-base-text));
+    background-color: #141414;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    line-height: 1.65;
+  }
+}
+
+.font-display {
+  font-family: var(--font-display);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.font-body {
+  font-family: var(--font-body);
+}
+
+.font-mono-numbers {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+}
+
+/* Custom Bullbee Button Gradient */
+.bg-bullbee-gradient {
+  background: linear-gradient(268deg, #D9AD5B 1%, #D09931 100%);
+}
+
+.bg-bullbee-gold {
+  background-color: #D3AF68;
+}
+
+.text-bullbee-cream {
+  color: #F8F0E2;
+}
+
+.text-bullbee-parchment {
+  color: #F4EADA;
+}
+
+.text-bullbee-gold {
+  color: #D3AF68;
+}
+
+.text-bullbee-highlight {
+  color: #CC9C52;
+}
+
+.text-bullbee-price {
+  color: #D9A25F;
+}
+
+.border-bullbee-gold {
+  border-color: rgba(211, 175, 104, 0.4);
+}
+
+.border-bullbee-subtle {
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+.border-bullbee-leather {
+  border-color: #3D332B;
+}
+
+.bg-bullbee-leather {
+  background-color: #241E19;
+}
+
+/* Smooth custom scrollbar matching trybullbee dark aesthetic */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #121212;
+}
+::-webkit-scrollbar-thumb {
+  background: #2e2a24;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #D3AF68;
+}
